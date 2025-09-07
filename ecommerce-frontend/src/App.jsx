@@ -7,16 +7,15 @@ import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import ProductList from './components/Products/ProductList';
 import Cart from './components/Cart/Cart';
-import './App.css';
 
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
         <Router>
-          <div className="App">
+          <div className="min-h-screen bg-gray-50">
             <Navbar />
-            <main>
+            <main className="container mx-auto px-4 py-8">
               <Routes>
                 <Route path="/" element={<ProductList />} />
                 <Route path="/login" element={<Login />} />
